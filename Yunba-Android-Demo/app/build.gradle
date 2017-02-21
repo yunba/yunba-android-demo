@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 15
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "io.yunba.thirdpart"
+        minSdkVersion 14
+        targetSdkVersion 14
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile(name:'timerLib-release', ext:'aar')
+
+    /*这个三个依赖需求去华为、小米、云巴官网去下载最新版本的sdk,放至app/libs目录下，
+    * 并在这里对jar包的名称做相应的修改*/
+    compile files('libs/HwPush_SDK_V2705.jar')
+    compile files('libs/MiPush_SDK_Client_3_0_3.jar')
+    compile files('libs/yunba-sdk-release.jar')
+
+}

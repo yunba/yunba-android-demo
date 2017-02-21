@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Yunba-Demo</string>
+    <string name="getUrlHint">http://rest.yunba.io:8080?method="method"&amp;appkey="app-key"&amp;seckey="secret-key"&amp;topic="topic"&amp;msg="your message"</string>
+    <string name="postUrlHint">http://rest.yunba.io:8080 (default)</string>
+    <string name="bodyHint">
+      {
+        "method":method,
+        "appkey":app-key,
+        "seckey":secret-key,
+        "topic":topic,
+        "msg":message,
+
+        "opts":{
+                 "time_to_live":number,
+                 "qos":number,
+                 "apn_json":{
+                              "aps":{
+                                      "alert":string,
+                                      "badge":number,
+                                      "sound":string,
+                                      "content-available":number
+                                    }
+                            }
+        }
+      }
+    </string>
+
+    <color name="yunba_universal_blue">#35B3F5</color>
+
+    <color name="yunba_actionbar_green">#07CD5A</color>
+    <color name="yunba_actionbar_red">#DA2916</color>
+
+    <color name="yunba_black">#000</color>
+    <color name="yunba_gray">#D6D6D6</color>
+    <color name="yunba_red">#DA2916</color>
+
+    <color name="yunba_screen_bg">#C0000000</color>
+    <color name="yunba_screen_userlog">#55FF55</color>
+
+    <color name="yunba_screen_connect">#0F9A08</color>
+    <color name="yunba_screen_disconnect">#DA2916</color>
+    <color name="yunba_screen_subscribe">#8D7AA2</color>
+    <color name="yunba_screen_subscribeack">#643EA0</color>
+    <color name="yunba_screen_publish">#339BE6</color>
+    <color name="yunba_screen_publishack">#2465A9</color>
+    <color name="yunba_screen_expand">#E6DB74</color>
+    <color name="yunba_screen_expandack">#E67217</color>
+
+</resources>

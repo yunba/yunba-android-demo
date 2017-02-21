@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        >
+        <Button
+            android:id="@+id/getBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/left_blue_bg"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:text="  get "/>
+        <Button
+            android:id="@+id/postBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/right_gray_bg"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:text="  post  "/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/yunba_black"
+            android:textSize="14sp"
+            android:text="Url     : "/>
+        <EditText
+            android:id="@+id/url"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/yunba_black"
+            android:textSize="14sp"
+            android:hint="@string/getUrlHint"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getPublish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_bg_selector"
+        android:visibility="visible"
+        android:text="publish"/>
+
+    <LinearLayout
+        android:id="@+id/postLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Type : "/>
+            <Button
+                android:id="@+id/keyValueBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="@drawable/left_blue_bg"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:text="key-value"/>
+            <Button
+                android:id="@+id/rawBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="@drawable/right_gray_bg"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:text="raw"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rawBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Body : "/>
+
+            <EditText
+                android:id="@+id/body"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="@string/bodyHint"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyValueBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Method : "/>
+            <EditText
+                android:id="@+id/method"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="method"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:id="@+id/topicORaliasTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Topic : "/>
+            <EditText
+                android:id="@+id/topicORalias"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="topic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Message : "/>
+            <EditText
+                android:id="@+id/message"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="message"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Alert : "/>
+            <EditText
+                android:id="@+id/alert"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="please enter message"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Badge : "/>
+            <EditText
+                android:id="@+id/badge"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:hint="please enter an integer"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Sound : "/>
+            <EditText
+                android:id="@+id/sound"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="bingbong.aiff"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Notification_title : "/>
+            <EditText
+                android:id="@+id/notificationTitle"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="title"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Notification_content : "/>
+            <EditText
+                android:id="@+id/notificationContent"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Time_to_live : "/>
+            <EditText
+                android:id="@+id/timeToLive"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:hint="432000(default time is 5 days)"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="QoS : "/>
+            <Button
+                android:id="@+id/qos0"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/left_gray_bg"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:text="0"/>
+            <Button
+                android:id="@+id/qos1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@color/yunba_universal_blue"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:text="1"/>
+            <Button
+                android:id="@+id/qos2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/right_gray_bg"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:text="2"/>
+          </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/postPublish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_bg_selector"
+            android:text="publish"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

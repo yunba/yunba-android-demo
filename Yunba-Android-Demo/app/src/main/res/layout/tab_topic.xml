@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:padding="10dp">
+            <EditText
+                android:id="@+id/topic_sub"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:hint="topic"/>
+            <Button
+                android:id="@+id/subscribeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_bg_selector"
+                android:layout_marginRight="10dp"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:text="  subscribe "/>
+            <Button
+                android:id="@+id/unsubscribeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_bg_selector"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:text="  unsubscribe  "/>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_gravity="center_horizontal"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:paddingBottom="10dp">
+          <EditText
+              android:id="@+id/topic_pre"
+              android:gravity="center_horizontal"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+              android:singleLine="true"
+              android:textColor="#000"
+              android:textSize="14sp"
+              android:hint="topic"/>
+          <Button
+              android:id="@+id/prensenceBtn"
+              android:layout_width="wrap_content"
+              android:layout_height="30dp"
+              android:background="@drawable/btn_bg_selector"
+              android:layout_marginRight="10dp"
+              android:textColor="#000"
+              android:textSize="14sp"
+              android:text="  prensence "/>
+          <Button
+              android:id="@+id/unPrensenceBtn"
+              android:layout_width="wrap_content"
+              android:layout_height="30dp"
+              android:background="@drawable/btn_bg_selector"
+              android:textColor="#000"
+              android:textSize="14sp"
+              android:text="  unprensence  "/>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="15dp"
+          >
+          <Button
+              android:id="@+id/pubToTopicBtn"
+              android:layout_width="wrap_content"
+              android:layout_height="30dp"
+              android:background="@drawable/left_blue_bg"
+              android:textColor="#000"
+              android:textSize="14sp"
+              android:text="  publish "/>
+          <Button
+              android:id="@+id/pub2ToTopicBtn"
+              android:layout_width="wrap_content"
+              android:layout_height="30dp"
+              android:background="@drawable/right_gray_bg"
+              android:textColor="#000"
+              android:textSize="14sp"
+              android:text="  publish2  "/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Topic : "/>
+            <EditText
+                android:id="@+id/topic_pub"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="topic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:text="Message : "/>
+            <EditText
+                android:id="@+id/msgToTopic"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/yunba_black"
+                android:textSize="14sp"
+                android:hint="message to topic"/>
+        </LinearLayout>
+
+       <Button
+          android:id="@+id/pubToTopic"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_marginBottom="20dp"
+           android:background="@drawable/btn_bg_selector"
+          android:visibility="visible"
+          android:text="publish"/>
+
+          <!--publish2-->
+        <LinearLayout
+            android:id="@+id/pub2LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:text="Alert : "/>
+                <EditText
+                    android:id="@+id/alert_topic"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:hint="please enter message"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:text="Badge : "/>
+                <EditText
+                    android:id="@+id/badge_topic"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:hint="please enter an integer"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:text="Sound : "/>
+                <EditText
+                    android:id="@+id/sound_topic"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:hint="bingbong.aiff"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:text="Notification_title : "/>
+                <EditText
+                    android:id="@+id/notificationTitle_topic"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:hint="title"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:text="Notification_content : "/>
+                <EditText
+                    android:id="@+id/notificationContent_topic"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:hint="content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:text="Time_to_live : "/>
+                <EditText
+                    android:id="@+id/timeToLive_topic"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:hint="432000(default time is 5 days)"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/yunba_black"
+                    android:textSize="14sp"
+                    android:text="QoS : "/>
+                <Button
+                    android:id="@+id/qos0_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/left_gray_bg"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:text="0"/>
+                <Button
+                    android:id="@+id/qos1_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@color/yunba_universal_blue"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:text="1"/>
+                <Button
+                    android:id="@+id/qos2_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/right_gray_bg"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:text="2"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pub2ToTopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg_selector"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="publish2"/>
+        </LinearLayout>
+
+
+      </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

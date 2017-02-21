@@ -1,0 +1,9 @@
+.DS_Store
+/Yunba-Android-Demo/*.iml
+/Yunba-Android-Demo/.gradle
+/Yunba-Android-Demo/local.properties
+/Yunba-Android-Demo/.idea/workspace.xml
+/Yunba-Android-Demo/.idea/libraries
+/Yunba-Android-Demo/build
+/Yunba-Android-Demo/captures
+/Yunba-Android-Demo/.externalNativeBuild

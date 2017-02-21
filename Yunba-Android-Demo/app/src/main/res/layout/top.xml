@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!--~~~~~~~~~~~~~~~screen~~~~~~~~~~~~~~-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/yunba_screen_bg">
+        <LinearLayout
+            android:id="@+id/screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"
+            android:paddingLeft="5dp"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <!--~~~~~~~~~~~~~~~timer~~~~~~~~~~~~~~-->
+    <LinearLayout
+        android:id="@+id/timerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <cn.iwgang.countuptime.CountupView
+            android:id="@+id/countupView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:isShowDay="false"
+            app:isShowHour="false"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:isShowMillisecond="true"
+            app:isHideTimeBackground="false"
+
+            app:suffixGravity="center"
+            app:suffixTextColor="#000000"
+            app:suffixTextSize="30sp"
+
+            app:timeBgDivisionLineSize="1dp"
+            app:timeBgColor="#444444"
+            app:timeBgSize="40dp"
+            app:timeBgRadius="20dp"
+
+            app:timeTextColor="@color/yunba_universal_blue"
+            app:timeTextSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/hideTimerBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:background="@drawable/btn_hide_timer_bg"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:text="x"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
