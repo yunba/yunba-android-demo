@@ -7,3 +7,5 @@
 /Yunba-Android-Demo/build
 /Yunba-Android-Demo/captures
 /Yunba-Android-Demo/.externalNativeBuild
+
+/Yunba-Android-Demo/app/*.iml
